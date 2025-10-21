@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import { initializeDatabase, testConnection } from './database/mysql.js';
-import { connectRedis, closeRedis, healthCheck } from './database/redis.js';
+import { connectRedis, closeRedis } from './database/redis.js';
 import mysqlRateLimiter from './middlewares/mysqlRateLimiter.js';
 import redisRateLimiter from './middlewares/redisRateLimiter.js';
 import {
@@ -61,7 +61,7 @@ const startServer = async () => {
 
     // Start the Express server
     app.listen(PORT, () => {
-      console.log(`\n🚀 Server is running on port ${PORT}`);
+      console.log(`\n🚀 Server is now running on port ${PORT}`);
       console.log(
         `\n⚡ Rate Limit: ${rateLimitConfig.maxRequests} requests per ${rateLimitConfig.windowSeconds} seconds`,
       );
