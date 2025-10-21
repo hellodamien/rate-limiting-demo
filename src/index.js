@@ -61,7 +61,7 @@ const startServer = async () => {
 
     // Start the Express server
     app.listen(PORT, () => {
-      console.log(`\n🚀 Server is running on port ${PORT}`);
+      console.log(`\n🚀 Server is now running on port ${PORT}`);
       console.log(
         `\n⚡ Rate Limit: ${rateLimitConfig.maxRequests} requests per ${rateLimitConfig.windowSeconds} seconds`,
       );
