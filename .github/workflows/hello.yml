@@ -8,6 +8,6 @@ jobs:
     steps:
       - name: Dire bonjour
         run: echo "Hello, GitHub Actions!"
-      
+
       - name: Date et heure
         run: date
